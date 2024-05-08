@@ -134,3 +134,5 @@ while not is_game_over(board):
 if no_moves_count == 2 or is_game_over(board):  # Game over due to no available moves or full board
     print("Game over!")
     print("Winner:", winner(board))
+
+
