@@ -59,4 +59,4 @@ By pruning branches that cannot influence the final decision, alpha-beta pruning
 
 ## Screenshot
 
-![Othello Game Screenshot](Othello Game Screenshot.png)
+![Othello Game Screenshot](https://github.com/Salma-Mamdoh/Ai_Project/blob/master/Othello%20Game%20Screenshot.png)
