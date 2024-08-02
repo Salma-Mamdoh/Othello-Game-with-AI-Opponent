@@ -56,3 +56,7 @@ By pruning branches that cannot influence the final decision, alpha-beta pruning
 
 5. **Alpha-Beta Pruning**:
    - During the recursive search, branches that are less favorable than previously explored branches are pruned to reduce computation time.
+
+## Screenshot
+
+![Othello Game Screenshot](Othello Game Screenshot.png)
