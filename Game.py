@@ -145,21 +145,6 @@ def computer_play():
         computer_play()
 
 
-def is_valid_move(board, row, col, player): # not used
-    if not (0 <= row < 8 and 0 <= col < 8):
-        return False
-    if board[row][col] != ' ':
-        return False
-    directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]  # Only horizontal and vertical directions
-    for dr, dc in directions:
-        r, c = row + dr, col + dc
-        while 0 <= r < 8 and 0 <= c < 8 and board[r][c] != ' ':
-            if board[r][c] == player:
-                return True
-            r += dr
-            c += dc
-    return False
-
 def get_available_moves(board, player):
     available_moves = []
     opponent = 'B' if player == 'W' else 'W'
@@ -231,9 +216,13 @@ def show_difficulty_options():
     global level
     level = simpledialog.askstring("Difficulty Level", "Please enter the Difficulty level:                "
                                                        "\n1) Easy\n2) Medium\n3) Hard")
-    if level:
+    if level is None:
+        return  # Exit the function if dialog was closed
+    if level and level.isdigit() and int(level) in [1, 2, 3]:
         print("Selected difficulty:", level)
         show_board(game_mode="PvC", difficulty_level=int(level))
+    else:
+        messagebox.showwarning("Invalid Input", "Please enter a number between 1 and 3.")
 
 # Title Label
 def create_title():
@@ -263,13 +252,6 @@ def create_info_frame():
     player_turn_label = tk.Label(info_frame, text="Current Turn: -", font=('Arial', 16))
     player_turn_label.pack(side="right", padx=20)
 
-    # info_frame.configure(bg='black')
-    #
-    # score_label = tk.Label(info_frame, text="Score: -", font=('Arial', 16), bg='black', fg='white')
-    # score_label.pack(side="left", padx=20, pady=10)
-    #
-    # player_turn_label = tk.Label(info_frame, text="Current Turn: -", font=('Arial', 16), bg='black', fg='white')
-    # player_turn_label.pack(side="right", padx=20, pady=10)
 # Board Frame
 def create_board_frame():
     global board_frame
