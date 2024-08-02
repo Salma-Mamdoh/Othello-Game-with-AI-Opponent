@@ -48,8 +48,3 @@ By pruning branches that cannot influence the final decision, alpha-beta pruning
 5. **Alpha-Beta Pruning**:
    - During the recursive search, branches that are less favorable than previously explored branches are pruned to reduce computation time.
 
-## Setup
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/othello-game.git
