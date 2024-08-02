@@ -1,5 +1,14 @@
 # Othello Game with AI
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [AI Algorithm](#ai-algorithm)
+  - [Minimax Algorithm](#minimax-algorithm)
+  - [Alpha-Beta Pruning](#alpha-beta-pruning)
+- [How It Works](#how-it-works)
+
 ## Overview
 
 This project implements the classic board game Othello (also known as Reversi) with an AI opponent using the minimax algorithm with alpha-beta pruning. The game is built with Python and Tkinter for the graphical user interface (GUI).
@@ -33,7 +42,7 @@ By pruning branches that cannot influence the final decision, alpha-beta pruning
 
 1. **Game Initialization**:
    - The game board is set up with the initial four disks placed in the center.
-   
+
 2. **Player Moves**:
    - Players (human or AI) make moves on the board. Valid moves are highlighted.
 
@@ -47,4 +56,3 @@ By pruning branches that cannot influence the final decision, alpha-beta pruning
 
 5. **Alpha-Beta Pruning**:
    - During the recursive search, branches that are less favorable than previously explored branches are pruned to reduce computation time.
-
